@@ -5,14 +5,12 @@ import PropTypes from 'prop-types'
 
 
 const Users = ({users, loading}) => {
-    if(loading) {
+    if (loading) {
         return <Spinner />
     } else {
         return (
             <div style={userStyle}>
-                {users.map((user) => {
-                    return <UserItem id={user.id} user={user} />
-                })}
+                {users.map((user) => <UserItem id={user.id} user={user} />)}
             </div>
         )
     }
